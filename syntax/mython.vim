@@ -81,7 +81,9 @@ syn keyword pythonStatement	as assert break continue del exec global
 syn keyword pythonStatement	lambda nonlocal pass print return with yield
 syn keyword pythonStatement	class def nextgroup=pythonFunction skipwhite
 syn keyword pythonConditional	elif else if
-syn keyword pythonRepeat	for while until
+syn match pythonConditional     "\($switch\)\|\($case\)"
+syn keyword pythonRepeat	for while
+syn match pythonRepeat          "$until"
 syn keyword pythonOperator	and in is not or
 syn keyword pythonException	except finally raise try
 syn keyword pythonInclude	from import
